@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luiz Armando</title>
 
 <style>
@@ -21,11 +21,12 @@ padding: 20px 100px;
 backdrop-filter: blur(25px);
 position: sticky;
 top: 0;
+z-index: 100;
 }
 
 header a {
 text-decoration: none;
-color: #1d1d1f;
+color: #6e6e73;
 font-size: 16px;
 cursor: pointer;
 }
@@ -83,23 +84,26 @@ margin: 0;
 
 .botoes {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
+  overflow-x: auto;
 }
 
 .botoes a {
   text-decoration: none;
+  padding: 10px 30px;
   color: #1d1d1f;
-  padding: 10px 20px;
   border: 1px solid #ccc;
   border-radius: 25px;
   background: transparent;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
 
 /* hover */
 .botoes a:hover {
   background: #e5e5e7;
+  transform: scale(1.03);
 }
 
 /* botão ativo (selecionado) */
@@ -114,6 +118,8 @@ margin: 0;
 display: flex;
 gap: 20px;
 overflow-x: auto;
+flex-wrap: wrap;
+justify-content: flex-start;
 }
 
 .card {
@@ -141,6 +147,24 @@ margin-top: 0;
 color: #0071e3;
 text-decoration: none;
 }
+
+/* AJUSTE MOBILE - Apenas para o respiro lateral */
+@media (max-width: 768px) {
+    header {
+        padding: 20px; 
+        gap: 20px;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .hero, .section {
+        padding: 60px 20px; /* Reduz de 100px para 20px apenas para o texto não colar na borda */
+    }
+
+    /* Garante que o card não seja maior que a tela do celular */
+    .card {
+        max-width: 100%; 
+    }
 
 /* BOTÃO */
 .btn {
