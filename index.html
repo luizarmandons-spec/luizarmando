@@ -41,7 +41,7 @@ cursor: pointer;
 /* HERO */
 .hero {
 text-align: center;
-padding: 300px 100px 20px;
+padding: 0px;
 }
 
 .hero h1 {
@@ -56,9 +56,14 @@ margin: 0;
 padding-top: 20px;
 }
 
+.hero h1, .hero p,
+.section h2, .section p {
+margin: 0;
+}
+
 /* SEÇÕES */
 .section {
-padding: 20px 100px;
+padding: 0px;
 text-align: center;
 }
 
@@ -93,7 +98,6 @@ margin: 0;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  overflow-x: auto;
   justify-content: center;
 }
 
@@ -118,6 +122,15 @@ margin: 0;
   background: #1d1d1f;
   color: white;
   border-color: #1d1d1f;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+    gap: 20px;               /* espaço entre elementos */
 }
 
 /* CARDS estilo Apple */
@@ -164,12 +177,21 @@ text-decoration: none;
         overflow-x: auto;
     }
 
+    .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+    gap: 20px;               /* espaço entre elementos */
+    }
+
     .hero {
-        padding: 300px 20px;    
+        padding: 0px;    
     }
 
     .section {
-        padding: 20px 20px; /* Reduz de 100px para 20px apenas para o texto não colar na borda */
+        padding: 0px; /* Reduz de 100px para 20px apenas para o texto não colar na borda */
     }
 
     /* Garante que o card não seja maior que a tela do celular */
@@ -228,6 +250,8 @@ color: black;
 
 </head>
 
+<div class="container">
+
 <body>
 
 <!-- INÍCIO -->
@@ -236,20 +260,17 @@ color: black;
 </section>
 
 <section class="botoes">
-<a href="" class="cinema">Cinema</a>
+<a href="cinema.html" class="cinema">Cinema</a>
 <a href="exatas.html" class="exatas">Exatas</a>
-<a href="" class="fotografia">Fotografia</a>
-<a href="" class="pinturas">Pinturas</a>
-<a href="" class="poemas">Poemas</a>
-<a href="" class="taro">Tarô</a>
-</div>
-</section>
-
-<section class="hero">
-<h1></h1>
+<a href="fotografia.html" class="fotografia">Fotografia</a>
+<a href="pinturas.html" class="pinturas">Pinturas</a>
+<a href="poemas.html" class="poemas">Poemas</a>
+<a href="taro.html" class="taro">Tarô</a>
 </section>
 
 </script>
+
+</div>
 
 </body>
 </html>
