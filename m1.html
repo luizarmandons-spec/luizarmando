@@ -74,6 +74,13 @@ font-size: 20px;
 margin: 0;
 }
 
+.section a {
+color: #6e6e73;
+font-size: 20px;
+margin: 0;
+text-decoration: none;
+}
+
 .section o {
 color: #6e6e73;
 margin: 0;
@@ -160,7 +167,7 @@ text-decoration: none;
     header {
         padding: 20px; 
         gap: 20px;
-        justify-content: flex-start;
+        justify-content: center;
         overflow-x: auto;
     }
 
@@ -232,118 +239,34 @@ color: black;
 <body>
 
 <header>
-<a onclick="scrollToId('início')">Início</a>
-<a onclick="scrollToId('interatividade')">Interatividade</a>
-<a onclick="scrollToId('cálculo 1')">Cálculo 1</a>
-<a onclick="scrollToId('física 1')">Física 1</a>
-<a onclick="scrollToId('geometria analítica')">Geometria Analítica</a>
-<a onclick="scrollToId('contato')">Contato</a>
+<a href="index.html" class="voltar">Voltar</a>
+<a onclick="scrollToId('sites')">Sites</a>
+<a onclick="scrollToId('webaula')">Webaula</a>
 </header>
 
-<!-- INÍCIO -->
-<section id="início" class="hero">
-<h1>Luiz Armando</h1>
-<p>Acesse alguns conteúdos de exatas</p>
+<section class="hero">
+<h1></h1>
 </section>
 
-<!-- INTERATIVIDADE -->
-<section id="interatividade" class="section">
-<h2>Interatividade</h2>
-
-<div class="botoes">
-<a href="https://luizarmandons-spec.github.io/epura/" target="_blank" class="ativo">Épura</a>
-<a href="https://www.geogebra.org/" target="_blank" class="ativo">GeoGebra</a>
-<a href="https://phet.colorado.edu/" target="_blank" class="ativo">PhET</a>
-</div>
+<!-- SITES -->
+<section id="sites" class="section">
+<h2>Sites</h2>
+<a href="https://sites.google.com/site/matematicajoaogondim/calculo-1?authuser=0" target="_blank" class="download">João Antônio Miranda Gondim</a>
+<br> <a href="https://sites.google.com/view/profsylviaferreira/disciplinas/c%C3%A1lculo-diferencial-e-integral" target="_blank" class="download">Sylvia Ferreira da Silva</a>
 </section>
 
-<!-- CÁLCULO 1 -->
-<section id="cálculo 1" class="section">
-<h2>Cálculo 1</h2>
-
-<div class="cards">
-<div class="card">
-<h3>Bibliografia</h3>
-<a href="b1.html" class="voltar">Acessar</a>
+<!-- WEBAULA -->
+<section id="webaula" class="section">
+<h2>Webaula</h2>
+<a href="https://eaulas.usp.br/portal/course.action?course=36762" target="_blank" class="download">E-aulas (USP)</a>
+<br> <a href="https://www.youtube.com/watch?v=EJ5FGPZbKeo&list=PLrOyM49ctTx8go5KFpSr-EMScIPygZNob" target="_blank" class="download">Cálculo 1 por Douglas Maioli</a>
 </div>
-
-<div class="card">
-<h3>Notas</h3>
-<a href="arquivos/Notas de Cálculo 1.pdf" target="_blank" class="download">Acessar</a>
-</div>
-
-<div class="card">
-<h3>Mais</h3>
-<a href="m1.html" class="download">Acessar</a>
-</div>
-</div>
-</section>
-
-<!-- FÍSICA 1 -->
-<section id="física 1" class="section">
-<h2>Física 1</h2>
-
-<div class="cards">
-<div class="card">
-<h3>Bibliografia</h3>
-<o>Em breve</o>
-</div>
-
-<div class="card">
-<h3>Notas</h3>
-<a href="arquivos/Notas de Física 1.pdf" target="_blank" class="download">Acessar</a>
-</div>
-
-<div class="card">
-<h3>Mais</h3>
-<a href="https://linktr.ee/mrd.uacsa" target="_blank" class="download">Acessar</a>
-</div>
-</div>
-</section>
-
-<!-- GEOMETRIA ANALÍTICA -->
-<section id="geometria analítica" class="section">
-<h2>Geometria Analítica</h2>
-
-<div class="cards">
-<div class="card">
-<h3>Bibliografia</h3>
-<o>Em breve</o>
-</div>
-
-<div class="card">
-<h3>Notas</h3>
-<a href="arquivos/Notas de Geometria Analítica.pdf" target="_blank" class="download">Acessar</a>
-</div>
-
-<div class="card">
-<h3>Mais</h3>
-<o>Em breve</0>
-</div>
-</div>
-</section>
-
-<!-- CONTATO -->
-<section id="contato" class="section">
-<h2>Contato</h2>
-<p>luizarmandons@gmail.com</p>
-</section>
 
 <section class="hero">
 <h1></h1>
 </section>
 
 <script>
-function scrollToId(id) {
-document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-
-function corrigir() {
-let r = document.getElementById("resposta").value;
-document.getElementById("resultado").innerText =
-(r == "0") ? "Correto!" : "Errado!";
-}
-</script>
 
 </body>
 </html>
