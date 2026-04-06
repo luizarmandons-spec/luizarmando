@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luiz Armando</title>
+
+<style>
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+background: #f5f5f7;
+color: #1d1d1f;
+}
+
+/* NAVBAR */
+header {
+display: flex;
+justify-content: center;
+gap: 40px;
+padding: 20px 100px;
+backdrop-filter: blur(25px);
+position: sticky;
+top: 0;
+z-index: 100;
+overflow-x: auto;
+white-space: nowrap;
+scrollbar-width: none;
+}
+
+header:-webkit-scrollbar {
+display: none;
+}
+
+header a {
+text-decoration: none;
+color: #6e6e73;
+font-size: 16px;
+cursor: pointer;
+}
+
+.img {
+    padding: 20px 100px;
+}
+
+.img img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* HERO */
+.hero {
+text-align: center;
+padding: 20px 100px;
+}
+
+.hero h1 {
+font-size: 40px;
+margin: 0;
+}
+
+.hero p {
+font-size: 30px;
+color: #6e6e73;
+margin: 0;
+padding-top: 20px;
+}
+
+/* SEÇÕES */
+.section {
+padding: 20px 100px;
+text-align: left;
+}
+
+.section h2 {
+font-size: 30px;
+margin: 0;
+padding-bottom: 20px;
+}
+
+.section p {
+color: #6e6e73;
+font-size: 20px;
+margin: 0;
+}
+
+.section o {
+color: #6e6e73;
+margin: 0;
+}
+
+/* CAIXAS DA APPLE */
+.links-rapidos {
+  padding: 40px;
+  background: #f5f5f7;
+}
+
+.links-rapidos h2 {
+  margin-bottom: 20px;
+}
+
+.botoes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+.botoes a {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #1d1d1f;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+/* hover */
+.botoes a:hover {
+  background: #e5e5e7;
+  transform: scale(1.03);
+}
+
+/* botão ativo (selecionado) */
+.botoes a.ativo {
+  background: #1d1d1f;
+  color: white;
+  border-color: #1d1d1f;
+}
+
+/* CARDS estilo Apple */
+.cards {
+display: flex;
+gap: 20px;
+overflow-x: auto;
+flex-wrap: wrap;
+justify-content: flex-start;
+}
+
+.card {
+min-width: 280px;
+background: white;
+border-radius: 20px;
+padding: 30px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+text-align: left;
+transition: 0.3s;
+}
+
+.card:hover {
+transform: scale(1.03);
+}
+
+.card h3 {
+margin-top: 0;
+font-size: 20px;
+}
+
+.card a {
+display: inline-block;
+margin-top: 0;
+color: #007aff;
+text-decoration: none;
+}
+
+/* AJUSTE MOBILE - Apenas para o respiro lateral */
+@media (max-width: 768px) {
+    header {
+        padding: 20px; 
+        gap: 20px;
+        justify-content: center;
+        overflow-x: auto;
+    }
+
+    .img {
+        padding: 20px;
+    }
+
+    .img img {
+        border-radius: 20px;
+    }
+
+    .hero {
+        padding: 20px 20px;    
+    }
+
+    .section {
+        padding: 20px 20px; /* Reduz de 100px para 20px apenas para o texto não colar na borda */
+    }
+
+    /* Garante que o card não seja maior que a tela do celular */
+    .card {
+        max-width: 100%; 
+    }
+}
+
+/* BOTÃO */
+.btn {
+background: #0071e3;
+color: white;
+padding: 10px 20px;
+border-radius: 20px;
+border: none;
+cursor: pointer;
+margin-top: 10px;
+}
+
+/* EXERCÍCIO */
+input {
+padding: 10px;
+border-radius: 10px;
+border: 1px solid #ccc;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+body {
+background: #000;
+color: white;
+}
+.card {
+background: #1c1c1e;
+}
+header {
+background: rgba(0,0,0,0.7);
+}
+.links-rapidos {
+    background: #111;
+}
+.botoes a {
+color: white;
+border-color: #444;
+}
+.botoes a:hover {
+background: #222;
+}
+.botoes a.ativo {
+background: white;
+color: black;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="ç">Início</a>
+<a onclick="scrollToId('contato')">Contato</a>
+</header>
+
+<section class="img">
+  <img src="imagens/primitivo.jpg" alt="pintura abstrata">
+</section>
+
+<section class="img">
+  <img src="imagens/alvorada.jpg" alt="pintura abstrata">
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section">
+<h2>Contato</h2>
+<p>luizarmandons@gmail.com</p>
+</section>
+
+<section class="hero">
+<h1></h1>
+</section>
+
+<script>
+function scrollToId(id) {
+document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+function corrigir() {
+let r = document.getElementById("resposta").value;
+document.getElementById("resultado").innerText =
+(r == "0") ? "Correto!" : "Errado!";
+}
+</script>
+
+</body>
+</html>
