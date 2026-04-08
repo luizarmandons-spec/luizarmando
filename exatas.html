@@ -94,6 +94,16 @@ margin: 0;
   gap: 20px;
   flex-wrap: wrap;
   overflow-x: auto;
+scroll-behavior: smooth;
+scroll-snap-type: x mandatory;
+padding-bottom: 10px;
+-ms-overflow-style: none;
+scrollbar-width: none;
+scroll-snap-align: start;
+}
+
+.botoes::-webkit-scrollbar {
+display: none;
 }
 
 .botoes a {
@@ -125,8 +135,17 @@ margin: 0;
 display: flex;
 gap: 20px;
 overflow-x: auto;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 justify-content: flex-start;
+scroll-behavior: smooth;
+scroll-snap-type: x mandatory;
+padding-bottom: 10px;
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.cards::-webkit-scrollbar {
+display: none;
 }
 
 .card {
@@ -137,6 +156,8 @@ padding: 30px;
 box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 text-align: left;
 transition: 0.3s;
+min-width: 280px;
+scroll-snap-align: start;
 }
 
 .card:hover {
